@@ -1,0 +1,671 @@
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+html { overflow-y: auto; }
+
+body {
+/*  reponsive
+	min-width: 960px; */
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_12 {
+	margin-left: auto;
+	margin-right: auto;
+/* responsive 
+	width: 960px;*/
+	max-width: 960px;
+	width: 100%;
+	position: relative;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+/* responsive 
+	display:inline; */
+	float: left;
+	position: relative;
+/* relative 
+	margin-left: 10px;
+	margin-right: 10px;*/
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12 {
+	position:relative;
+}
+
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_12 .grid_1 {
+	max-width:60px;
+	width: 100%
+}
+
+.container_12 .grid_2 {
+	max-width:140px;
+	width: 100%
+}
+
+.container_12 .grid_3 {
+	max-width:220px;
+	width: 100%
+}
+
+.container_12 .grid_4 {
+	max-width:300px;
+	width: 100%
+}
+
+.container_12 .grid_5 {
+	max-width:380px;
+	width: 100%
+}
+
+.container_12 .grid_6 {
+	max-width:460px;
+	width: 100%
+}
+
+.container_12 .grid_7 {
+	max-width:540px;
+	width: 100%
+}
+
+.container_12 .grid_8 {
+	max-width:620px;
+	width: 100%
+}
+
+.container_12 .grid_9 {
+	max-width:700px;
+	width: 90%; /* 100% */
+}
+
+.container_12 .grid_10 {
+	max-width:780px;
+	width: 100%
+}
+
+.container_12 .grid_11 {
+	max-width:860px;
+	width: 100%
+}
+
+.container_12 .grid_12 {
+	max-width:940px;
+	width: 100%
+}
+
+
+
+
+/* Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_12 .prefix_1 {
+	padding-left:80px;
+}
+
+.container_12 .prefix_2 {
+	padding-left:160px;
+}
+
+.container_12 .prefix_3 {
+	padding-left:240px;
+}
+
+.container_12 .prefix_4 {
+	padding-left:320px;
+}
+
+.container_12 .prefix_5 {
+	padding-left:400px;
+}
+
+.container_12 .prefix_6 {
+	padding-left:480px;
+}
+
+.container_12 .prefix_7 {
+	padding-left:560px;
+}
+
+.container_12 .prefix_8 {
+	padding-left:640px;
+}
+
+.container_12 .prefix_9 {
+	padding-left:720px;
+}
+
+.container_12 .prefix_10 {
+	padding-left:800px;
+}
+
+.container_12 .prefix_11 {
+	padding-left:880px;
+}
+
+
+
+/* Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_12 .suffix_1 {
+	padding-right:80px;
+}
+
+.container_12 .suffix_2 {
+	padding-right:160px;
+}
+
+.container_12 .suffix_3 {
+	padding-right:240px;
+}
+
+.container_12 .suffix_4 {
+	padding-right:320px;
+}
+
+.container_12 .suffix_5 {
+	padding-right:400px;
+}
+
+.container_12 .suffix_6 {
+	padding-right:480px;
+}
+
+.container_12 .suffix_7 {
+	padding-right:560px;
+}
+
+.container_12 .suffix_8 {
+	padding-right:640px;
+}
+
+.container_12 .suffix_9 {
+	padding-right:720px;
+}
+
+.container_12 .suffix_10 {
+	padding-right:800px;
+}
+
+.container_12 .suffix_11 {
+	padding-right:880px;
+}
+
+
+
+/* Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_12 .push_1 {
+	left:80px;
+}
+
+.container_12 .push_2 {
+	left:160px;
+}
+
+.container_12 .push_3 {
+	left:240px;
+}
+
+.container_12 .push_4 {
+	left:320px;
+}
+
+.container_12 .push_5 {
+	left:400px;
+}
+
+.container_12 .push_6 {
+	left:480px;
+}
+
+.container_12 .push_7 {
+	left:560px;
+}
+
+.container_12 .push_8 {
+	left:640px;
+}
+
+.container_12 .push_9 {
+	left:720px;
+}
+
+.container_12 .push_10 {
+	left:800px;
+}
+
+.container_12 .push_11 {
+	left:880px;
+}
+
+
+
+/* Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_12 .pull_1 {
+	left:-80px;
+}
+
+.container_12 .pull_2 {
+	left:-160px;
+}
+
+.container_12 .pull_3 {
+	left:-240px;
+}
+
+.container_12 .pull_4 {
+	left:-320px;
+}
+
+.container_12 .pull_5 {
+	left:-400px;
+}
+
+.container_12 .pull_6 {
+	left:-480px;
+}
+
+.container_12 .pull_7 {
+	left:-560px;
+}
+
+.container_12 .pull_8 {
+	left:-640px;
+}
+
+.container_12 .pull_9 {
+	left:-720px;
+}
+
+.container_12 .pull_10 {
+	left:-800px;
+}
+
+.container_12 .pull_11 {
+	left:-880px;
+}
+
+
+
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix {
+  zoom: 1;
+}
+
+
+
+
+/* @media Queries -------------------------------------------- */
+
+/* @iPhone < 480px - One column fluid.
+-------------------------------------------------------------- */
+@media screen and (max-width:480px) {
+	
+}
+
+/* @1-Col < 640px - One column fluid.
+-------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+	html{
+		-webkit-text-size-adjust:none;
+		-ms-text-size-adjust:none
+	}
+	
+	body{
+		font-size: 82.5%;
+	}
+
+	html, body {
+    	max-width: 960px;
+    	width: 100%; 
+	}
+	
+	.container{
+		width:92%;
+		margin:0 auto
+	}
+	
+	.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12,.grid_full{
+		float: none;
+		width:100%;
+		margin:0 0 2.5em;
+	}
+
+	.content-pad-left,
+	.content-pad-right {
+		margin-left:0;
+		margin-right:0;
+	}
+
+	#widget-header{
+		display: none;
+	}
+	#email-box{
+		right: 0;
+		text-align: center;
+	}
+	#header .logo {
+		left: 50%;
+	    margin-left: -130px;
+	}
+	.sf-menu {
+		float: none;
+		/*
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    background-color: #333;
+	    */
+	    max-width: 940px;
+		width: 100%;
+		margin: 180px -0px 0 -10px;
+	    padding: 0 0 0 10px !important;
+	}
+
+	/* Navbar */
+	.sf-menu {
+	    background-image: none;
+	 }
+	 .sf-menu a {
+	    color: #000;
+	}
+
+	/* Homepage ad */
+	div#text-4.widget_text {
+		margin: 10%;
+	}
+
+	/* Homepage video */
+	#faded .pagination {
+	    position: relative; 
+	    right: 0; 
+	    top: 0; 
+	}
+	#faded ul, #faded ul li {
+	    margin: auto;
+	    padding: auto; 
+	}
+
+
+	#content {
+		margin: 2%;
+	}
+
+	/* Video page */
+	#gallery .portfolio {
+		padding: 2%;
+	}
+	#gallery .portfolio li {
+	    display: inline-block;
+	}
+	body.page-id-7 .grid_12 {
+	    /* max-width: 718px; */
+	    width: 100%;
+	}
+	#gallery.four_columns .portfolio li a.image-wrap {
+	    width: 100%;
+	    height: 100%;
+	}
+
+        /* Pictures page */
+	body.page-id-9 .grid_12 {
+	   max-width: 717px;
+	   width: 100%
+	}
+
+	/* Make video iframe responsive */
+	.video_iframe {
+		max-width: 700px!important;
+	    width: 100%!important;
+	    height: 100%!important;
+	    float: left;
+	    position: relative;
+	    padding-bottom: 56.25%;
+	    padding-top: 35px;
+	    height: 0;
+	    overflow: hidden;
+	}
+	.video_iframe iframe {
+	    height: 410px;
+	    width: 700px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%!important;
+	    height: 100%!important;
+	}
+
+
+	/* Pictures page */
+	/* Pictures Sidebar */
+	body.postid-816 .one_third {
+	    width: 100%;
+	    max-width: 232px; 
+	}
+
+       .grid_gallery {
+	    display: flex !important;
+	}
+
+	/* Inside Picture page - Portfolio-view */
+	.grid_gallery .gallery_item {
+	    float: left;
+	    margin: 0 10px 15px 0;
+	    /* removed to allow multiple images in one row - width: 100%; */
+	}
+	.featured-thumbnail img {
+	    float: left;
+	    width: 100%;
+	    height: 100%;
+	}
+	/* Inside Picture page - Portfolio-view - Sidebar */
+	body.postid-824 .one_third {
+	    width: initial;
+	}
+
+	#gallery.four_columns .portfolio li {
+	    /* width: initial; */
+	}
+	.featured-thumbnail {
+	    position: relative;
+	    float: left;
+	    margin: 5px 20px 10px 0;
+	    /* width: 100%; */
+	}
+
+        /* Blog page - multiple images in one row */
+        .entry-content .gallery .gallery-item,
+        .page-content .gallery .gallery-item {
+           display: inline-table;
+           display: inline-table;
+        }
+
+        /* About Us - bio width */
+        .about-us-page ul li .member-descp {
+            max-width: 405px;
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        /* Contact Us page - address on top */
+        .contact-us-page {
+            display: flex;
+            flex-direction: column-reverse;
+            max-width: 960px;
+            width: 100%!important; 
+        }
+        .contact-us-page div {
+            width: 100%!important;
+        }
+
+
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	    display: inline-block;
+	}
+
+	#sidebar {
+	    padding: 10%;
+	}
+
+	#widget-footer {
+    	padding: 10%;
+    }
+
+
+
+}
+
+
+
+.sf-menu{
+	/* max-width: 940px;
+	width: 100%; */
+	margin: 180px -0px 0 -10px;
+    padding: 0 10px;
+}
+
+#main {
+	max-width:980px;
+	width: 100%
+}
+#copyright{
+	margin: 0 0px;
+}
+
+body.postid-2490 #footer{
+    max-width: 982px;
+    width: 100%;
+}
+#footer{
+    max-width: 982px;
+    width: 100%;	
+}
+/* Header Advertisement width fix on Video page */
+body.page-id-7 .grid_12,  body.page-id-9 .grid_12{
+    max-width: 940px;
+    width: 100%;
+}
+.four_columns .portfolio li {
+    margin-right: 5px!important;
+}
+
+/* Blog - remove icon in front of inline-gallery images */
+.entry-content .gallery .gallery-icon,
+.page-content .gallery .gallery-icon {
+    background: none;
+}
+
+/* Contact Us - add padding */
+.contact-us-page {
+    padding: 26px;
+}
+

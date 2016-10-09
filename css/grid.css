@@ -583,8 +583,9 @@ body {
 
         /* Blog page - multiple images in one row */
         .entry-content .gallery .gallery-item,
-        .page-content .gallery .gallery-item {
-		display: inline-table;
+        .page-content .gallery .gallery-item,
+	#gallery-1 .gallery-item {
+		display: inline-table!important;
 		display: inline-table;
         }
 
@@ -661,7 +662,8 @@ body.page-id-7 .grid_12,  body.page-id-9 .grid_12{
 
 /* Blog - remove icon in front of inline-gallery images */
 .entry-content .gallery .gallery-icon,
-.page-content .gallery .gallery-icon {
+.page-content .gallery .gallery-icon,
+dl dt {
 	background: none;
 }
 

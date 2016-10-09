@@ -586,8 +586,10 @@ body {
         .page-content .gallery .gallery-item,
 	#gallery-1 .gallery-item {
 		display: inline-table!important;
-		display: inline-table;
         }
+	.entry-content img {
+		width: 100%;
+	}
 
         /* About Us - bio width */
         .about-us-page ul li .member-descp {

@@ -494,6 +494,11 @@ body {
 		padding: auto; 
 	}
 
+	/* Homepage video width */
+	.slides video {
+		width: 100%;
+		max-width: 350px;
+	}
 
 	#content {
 		margin: 2%;
@@ -622,7 +627,7 @@ body {
 
 	#widget-footer {
 		padding: 10%;
-    }
+	}
 
 
 

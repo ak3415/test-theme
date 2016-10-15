@@ -169,6 +169,21 @@
 	<header id="header">
 	 <div class="container_12 clearfix">
 			<div class="grid_12" >
+
+
+        <nav class="top-menu">
+          <?php wp_nav_menu( array(
+            'container'       => 'ul', 
+            'menu_class'      => 'menu', 
+            'menu_id'         => 'menu-top-menu',
+            'depth'           => 0,
+            'theme_location' => 'top_menu' /*, 
+      	    'link_before' => '<span class="right">',
+      	    'link_after' => '</span>' */
+            )); 
+          ?>
+	</nav><!--.top-nav-->
+
       	<div class="logo">
           <?php if(of_get_option('logo_type') == 'text_logo'){?>
           	<?php if( is_front_page() || is_home() || is_404() ) { ?>
@@ -184,6 +199,158 @@
             	<a href="<?php bloginfo('url'); ?>/" id="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('description'); ?>"></a>
             <?php } ?>
           <?php }?>
+
+	<!-- Advertising widgets -->
+	   <?php if (is_page('link-exchange')) { 
+	   if ( ! dynamic_sidebar( 'Sponsor Home' ) ) { 
+	   } }// end extra sidebar widget area 
+	    elseif (is_page('sponsors-media')) { 
+	   if ( ! dynamic_sidebar( 'Sponsors & Media Top' ) ) { 
+	   } }// end extra sidebar widget area 
+	    elseif(is_page('Home')) { 
+	   if ( ! dynamic_sidebar( 'Home' ) ) { 
+	   } } // end extra sidebar widget area 
+	     elseif ( is_single('Boxing')) { 
+	   if ( ! dynamic_sidebar('Boxing Catgeory') ) { 
+	   } } // end extra sidebar widget area 
+	   elseif ( is_single('African-American/Caribbean')) { 
+	   if ( ! dynamic_sidebar('African-American/Caribbean Top') ) { 
+	   } } 
+	    elseif ( is_single('Business')) { 
+	   if ( ! dynamic_sidebar('Business Top ') ) { 
+	   } } 
+	    elseif ( is_single('Celebrities')) { 
+	   if ( ! dynamic_sidebar('Celebrities Top ') ) { 
+	   } } 
+	   elseif ( is_page('Testimonials')) { 
+	   if ( ! dynamic_sidebar('Testimonials Top ') ) { 
+	   } } 
+	    elseif ( is_single('Cultural')) { 
+	   if ( ! dynamic_sidebar('Cultural') ) { 
+	   } } 
+	    elseif ( is_single('Entertainers')) { 
+	   if ( ! dynamic_sidebar('Entertainers') ) { 
+	   } } 
+	    elseif ( is_single('Fashion')) { 
+	   if ( ! dynamic_sidebar('Fashion') ) { 
+	   } } 
+	    elseif ( is_single('Humanitarians')) { 
+	   if ( ! dynamic_sidebar('Humanitarians') ) { 
+	   } } 
+	    elseif ( is_single('Latino')) { 
+	   if ( ! dynamic_sidebar('Latino ') ) { 
+	   } } 
+	    elseif ( is_single('Legends')) { 
+	   if ( ! dynamic_sidebar('Legends') ) { 
+	   } } 
+	    elseif ( is_single('LGBT')) { 
+	   if ( ! dynamic_sidebar('LGBT') ) { 
+	   } } 
+	    elseif ( is_single('Motor')) { 
+	   if ( ! dynamic_sidebar('Motor ') ) { 
+	   } } 
+	    elseif ( is_single('Music')) { 
+	   if ( ! dynamic_sidebar('Music') ) { 
+	   } } 
+	    elseif ( is_single('Politics')) { 
+	   if ( ! dynamic_sidebar('Politics') ) { 
+	   } } 
+	    elseif ( is_single('Product People')) { 
+	   if ( ! dynamic_sidebar('Product People') ) { 
+	   } } 
+	    elseif ( is_single('Sports')) { 
+	   if ( ! dynamic_sidebar('Sports') ) { 
+	   } } 
+	    elseif ( is_single('Technology')) { 
+	   if ( ! dynamic_sidebar('Technology ') ) { 
+	   } } 
+	    elseif ( is_single('Women')) { 
+	   if ( ! dynamic_sidebar('Women') ) { 
+	   } } 
+	    elseif ( is_single('World Leaders')) { 
+	   if ( ! dynamic_sidebar('World Leaders ') ) { 
+	   } } 
+	    elseif ( is_page('pictures')) {
+	   if ( ! dynamic_sidebar('pictures Top') ) { 
+	   } } 
+            elseif ( is_page('coverage')) { 
+    	   if ( ! dynamic_sidebar('Coverage Top') ) { 
+    	   } } 
+	    elseif ( is_page('blog')) { 
+    	   if ( ! dynamic_sidebar('Blog Top ') ) { 
+    	   } }
+	    elseif ( is_page('aabout-us')) { 
+	   if ( ! dynamic_sidebar('About Top ') ) { 
+	   } } 
+	    elseif ( is_page('advertising')) { 
+	   if ( ! dynamic_sidebar('Advertising Top') ) { 
+	   } } 
+	    elseif ( is_page('contacts')) { 
+	   if ( ! dynamic_sidebar('Contact Top') ) { 
+	   } } 
+	    elseif ( is_page('archives')) { 
+	   if ( ! dynamic_sidebar('Archives Top') ) { 
+	   } } 
+	    elseif ( is_page('join-us')) { 
+	   if ( ! dynamic_sidebar('join-us Top') ) { 
+	   } }
+	    elseif ( is_page('videos')) { 
+	   if ( ! dynamic_sidebar('Video Top') ) { 
+	   } }
+	    elseif (is_category('boxing')) { 
+	   if ( ! dynamic_sidebar('Boxing Catgeory' ) ) { 
+	   } }
+	    elseif(is_category('business')) {
+	   if( ! dynamic_sidebar( 'Business Top' ) ) { 
+	   } }
+	    elseif(is_category('celebrity')) {
+	   if( ! dynamic_sidebar( 'Celebrities Top' ) ) { 
+	   } }
+	    elseif(is_category('cultural')) {
+           if( ! dynamic_sidebar( 'Cultural' ) ) { 
+	   } }
+	    elseif(is_category('entertainment-videos')) {
+	   if( ! dynamic_sidebar( 'Entertainers' ) ) { 
+	   } }
+	    elseif(is_category('fashion')) {
+	   if( ! dynamic_sidebar( 'Fashion' ) ) { 
+	   } }	
+	    elseif(is_category('humanitarians')) {
+	   if( ! dynamic_sidebar( 'Humanitarians' ) ) { 
+	   } }
+	    elseif(is_category('latino')) {
+	   if( ! dynamic_sidebar( 'Latino' ) ) { 
+	   } }
+	    elseif(is_category('lgbt')) {
+	   if( ! dynamic_sidebar( 'LGBT' ) ) { 
+	   } }
+	    elseif(is_category('motor')) {
+	   if( ! dynamic_sidebar( 'Motor' ) ) { 
+	   } }
+	    elseif(is_category('politics')) {
+	   if( ! dynamic_sidebar( 'Politics' ) ) { 
+	   } }
+	    elseif(is_category('product-people')) {
+	   if( ! dynamic_sidebar( 'Product People' ) ) { 
+	   } }
+	    elseif(is_category('sports')) {
+	   if( ! dynamic_sidebar( 'Sports' ) ) { 
+	   } }
+	    elseif(is_category('tech')) {
+	   if( ! dynamic_sidebar( 'Technology' ) ) { 
+	   } }		
+	    elseif(is_category('african-american-or-caribbean')) {
+	   if( ! dynamic_sidebar( 'African-American/Caribbean Top' ) ) { 
+	   } }
+	    elseif(is_page_template('blog-template')) {
+	   if( ! dynamic_sidebar( 'Blog Top' ) ) { 
+	   } }
+	    else{
+           if( ! dynamic_sidebar( 'blank1' ) ) : 
+           endif;    
+	} ?>
+
+	<!-- End Advertising Widgets -->
         </div>
                             
                             
@@ -219,292 +386,7 @@
             
          
             
-                    <?php if (is_page('link-exchange')) { 
-
-                   if ( ! dynamic_sidebar( 'Sponsor Home' ) ) { 
               
-                   } }// end extra sidebar widget area 
-                   
-                               
-                    elseif (is_page('sponsors-media')) { 
-
-                   if ( ! dynamic_sidebar( 'Sponsors & Media Top' ) ) { 
-              
-                   } }// end extra sidebar widget area 
-                  
-                   
-                   
-                   
-                   
-                    elseif(is_page('Home')) { 
-            
-                   if ( ! dynamic_sidebar( 'Home' ) ) { 
-              
-                   } } // end extra sidebar widget area 
-              
-                     elseif ( is_single('Boxing')) { 
-            
-                   if ( ! dynamic_sidebar('Boxing Catgeory') ) { 
-              
-                   } } // end extra sidebar widget area 
-            
-            
-                   
-                   elseif ( is_single('African-American/Caribbean')) { 
-            
-                   if ( ! dynamic_sidebar('African-American/Caribbean Top') ) { 
-              
-                   } } 
-                   
-                    elseif ( is_single('Business')) { 
-            
-                   if ( ! dynamic_sidebar('Business Top ') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Celebrities')) { 
-            
-                   if ( ! dynamic_sidebar('Celebrities Top ') ) { 
-              
-                   } } 
-                   
-                   
-                   elseif ( is_page('Testimonials')) { 
-            
-                   if ( ! dynamic_sidebar('Testimonials Top ') ) { 
-              
-                   } } 
-                   
-                   
-                   
-                    elseif ( is_single('Cultural')) { 
-            
-                   if ( ! dynamic_sidebar('Cultural') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Entertainers')) { 
-            
-                   if ( ! dynamic_sidebar('Entertainers') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Fashion')) { 
-            
-                   if ( ! dynamic_sidebar('Fashion') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Humanitarians')) { 
-            
-                   if ( ! dynamic_sidebar('Humanitarians') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Latino')) { 
-            
-                   if ( ! dynamic_sidebar('Latino ') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Legends')) { 
-            
-                   if ( ! dynamic_sidebar('Legends') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('LGBT')) { 
-            
-                   if ( ! dynamic_sidebar('LGBT') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Motor')) { 
-            
-                   if ( ! dynamic_sidebar('Motor ') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Music')) { 
-            
-                   if ( ! dynamic_sidebar('Music') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Politics')) { 
-            
-                   if ( ! dynamic_sidebar('Politics') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Product People')) { 
-            
-                   if ( ! dynamic_sidebar('Product People') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Sports')) { 
-            
-                   if ( ! dynamic_sidebar('Sports') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Technology')) { 
-            
-                   if ( ! dynamic_sidebar('Technology ') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('Women')) { 
-            
-                   if ( ! dynamic_sidebar('Women') ) { 
-              
-                   } } 
-                   
-                   
-                    elseif ( is_single('World Leaders')) { 
-            
-                   if ( ! dynamic_sidebar('World Leaders ') ) { 
-              
-                   } } 
-                   
-                   
-                    
-                   
-                   elseif ( is_page('pictures')) {
-            
-                   if ( ! dynamic_sidebar('pictures Top') ) { 
-               
-                   } } 
-                   
-                  
-               elseif ( is_page('coverage')) { 
-            
-                   if ( ! dynamic_sidebar('Coverage Top') ) { 
-              
-                   } } 
-                   
-                   
-                   
-                   elseif ( is_page('blog')) { 
-            
-                   if ( ! dynamic_sidebar('Blog Top ') ) { 
-              
-                   } } 
-                   
-                   
-                   
-                   
-                   elseif ( is_page('about-us')) { 
-            
-                   if ( ! dynamic_sidebar('About Top ') ) { 
-              
-                   } } 
-                   
-                   
-                   
-                    elseif ( is_page('advertising')) { 
-            
-                   if ( ! dynamic_sidebar('Advertising Top') ) { 
-              
-                   } } 
-                   
-                   
-                   elseif ( is_page('contacts')) { 
-            
-                   if ( ! dynamic_sidebar('Contact Top') ) { 
-              
-                   } } 
-                   
-                    elseif ( is_page('archives')) { 
-            
-                   if ( ! dynamic_sidebar('Archives Top') ) { 
-              
-                   } } 
-                   
-                   
-                   elseif ( is_page('join-us')) { 
-            
-                   if ( ! dynamic_sidebar('join-us Top') ) { 
-              
-                   } }
-                    elseif ( is_page('videos')) { 
-            
-                   if ( ! dynamic_sidebar('Video Top') ) { 
-              
-                   } }
-                  
-                   elseif (is_category('boxing')) { 
-					if ( ! dynamic_sidebar('Boxing Catgeory' ) ) { 
-              			} }
-                  elseif(is_category('business')) {
-            		if( ! dynamic_sidebar( 'Business Top' ) ) { 
-              			} }
-                  elseif(is_category('celebrity')) {
-            		if( ! dynamic_sidebar( 'Celebrities Top' ) ) { 
-              			} }
-                  elseif(is_category('cultural')) {
-            		if( ! dynamic_sidebar( 'Cultural' ) ) { 
-              			} }
-                  elseif(is_category('entertainment-videos')) {
-            		if( ! dynamic_sidebar( 'Entertainers' ) ) { 
-              			} }
-                  elseif(is_category('fashion')) {
-            		if( ! dynamic_sidebar( 'Fashion' ) ) { 
-              			} }	
-                  elseif(is_category('humanitarians')) {
-            		if( ! dynamic_sidebar( 'Humanitarians' ) ) { 
-              			} }
-                  elseif(is_category('latino')) {
-            		if( ! dynamic_sidebar( 'Latino' ) ) { 
-              			} }
-                  elseif(is_category('lgbt')) {
-            		if( ! dynamic_sidebar( 'LGBT' ) ) { 
-              			} }
-                  elseif(is_category('motor')) {
-            		if( ! dynamic_sidebar( 'Motor' ) ) { 
-              			} }
-                  elseif(is_category('politics')) {
-            		if( ! dynamic_sidebar( 'Politics' ) ) { 
-              			} }
-                  elseif(is_category('product-people')) {
-            		if( ! dynamic_sidebar( 'Product People' ) ) { 
-              			} }
-                  elseif(is_category('sports')) {
-            		if( ! dynamic_sidebar( 'Sports' ) ) { 
-              			} }
-                  elseif(is_category('tech')) {
-            		if( ! dynamic_sidebar( 'Technology' ) ) { 
-              			} }		
-                  elseif(is_category('african-american-or-caribbean')) {
-            		if( ! dynamic_sidebar( 'African-American/Caribbean Top' ) ) { 
-              			} }
- 				  elseif(is_page_template('blog-template')) {
-            		if( ! dynamic_sidebar( 'Blog Top' ) ) { 
-              			} }
-			 else{
-             
-               if( ! dynamic_sidebar( 'blank1' ) ) : 
-              
-               endif; 
-            
-            
-                } ?>
-               
                 
          <div class="widget-header1 widget_my_bannerswidget1" id="my_bannerswidget-4" >   
                    

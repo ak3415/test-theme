@@ -473,14 +473,23 @@ body {
 	/* Navbar */
 	.sf-menu {
 		background-image: none;
+		margin-top: 280px!important;
 	 }
 	 .sf-menu a {
 		color: #000;
+	}
+	.top-menu {
+		display: none;
 	}
 
 	/* Homepage ad */
 	div#text-4.widget_text {
 		margin: 10%;
+	}
+	#text-203 {
+		margin-top: -80px!important;
+		margin-left: -40px;
+		width: 100%!important;
 	}
 
 	/* Homepage video */
@@ -685,3 +694,22 @@ dl dt {
 	padding: 26px;
 }
 
+
+/* top nav */
+.top-menu {
+	margin-top: -20px;
+}
+
+/* top ad and menu placement */
+#text-203 {
+    margin-top: -180px;
+}
+.sf-menu {
+    margin: 140px -0px 10px -10px;
+}
+
+/* temporary widget top-menu old hider 
+   replaced by actual top-menu from header file */
+.menu-top-menu-container {
+    display: none;
+}

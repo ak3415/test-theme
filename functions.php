@@ -509,6 +509,14 @@ register_sidebar(array('name'=>'join-us Top',
             'after_title' => '</h3>',
         ));
 
+// custom top menu / navbar support
+if ( function_exists( 'register_nav_menus' ) ) {
+    register_nav_menus(
+      array(
+        'top_menu' => 'Top Menu',
+      )
+    );
+}
 
 
 

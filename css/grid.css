@@ -586,6 +586,11 @@ body {
 		/* width: 100%; */
 	}
 
+	/* Inside Pictures page - stop expanding lightbox / PrettyPhoto */
+	div.pp_default .pp_expand {
+		display: none!important;
+	}
+
         /* Blog page - multiple images in one row */
         .entry-content .gallery .gallery-item,
         .page-content .gallery .gallery-item,

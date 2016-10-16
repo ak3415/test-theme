@@ -478,8 +478,12 @@ body {
 	 .sf-menu a {
 		color: #000;
 	}
-	.top-menu {
+	.top-menu .menu li {
 		display: none;
+	}
+	.top-menu .menu li:nth-child(2) {
+		display: initial;
+		margin-top: 30px;
 	}
 
 	/* Homepage ad */
@@ -702,14 +706,14 @@ dl dt {
 
 /* top ad and menu placement */
 #text-203 {
-    margin-top: -180px;
+	margin-top: -180px;
 }
 .sf-menu {
-    margin: 140px -0px 10px -10px;
+	margin: 140px -0px 10px -10px;
 }
 
 /* temporary widget top-menu old hider 
    replaced by actual top-menu from header file */
 .menu-top-menu-container {
-    display: none;
+	display: none;
 }

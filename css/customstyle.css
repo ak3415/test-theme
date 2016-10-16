@@ -1,0 +1,315 @@
+/* @media Queries -------------------------------------------- */
+
+/* @iPhone < 480px - One column fluid.
+-------------------------------------------------------------- */
+@media screen and (max-width:480px) {
+	
+}
+
+/* @1-Col < 640px - One column fluid.
+-------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+	html{
+		-webkit-text-size-adjust:none;
+		-ms-text-size-adjust:none
+	}
+	
+	body{
+		font-size: 82.5%;
+	}
+
+	html, body {
+		max-width: 960px;
+		width: 100%; 
+	}
+	
+	.container{
+		width:92%;
+		margin:0 auto
+	}
+	
+	.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12,.grid_full{
+		float: none;
+		width:100%;
+		margin:0 0 2.5em;
+	}
+
+	.content-pad-left,
+	.content-pad-right {
+		margin-left:0;
+		margin-right:0;
+	}
+
+	#widget-header{
+		display: none;
+	}
+	#email-box{
+		right: 0;
+		text-align: center;
+	}
+	#header .logo {
+		left: 50%;
+		margin-left: -130px;
+	}
+	.sf-menu {
+		float: none;
+		/*
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		*/
+		max-width: 940px;
+		width: 100%;
+		margin: 180px -0px 0 -10px;
+		padding: 0 0 0 10px !important;
+	}
+
+	/* Navbar */
+	.sf-menu {
+		background-image: none;
+		margin-top: 280px!important;
+	 }
+	 .sf-menu a {
+		color: #000;
+	}
+	.top-menu .menu li {
+		display: none;
+	}
+	.top-menu .menu li:nth-child(2) {
+		display: initial;
+		margin-top: 30px;
+	}
+
+	/* Homepage ad */
+	div#text-4.widget_text {
+		margin: 10%;
+	}
+	#text-203 {
+		margin-top: -80px!important;
+		margin-left: -40px;
+		width: 100%!important;
+	}
+
+	/* Homepage video */
+	#faded .pagination {
+		position: relative; 
+		right: 0; 
+		top: 0; 
+	}
+	#faded ul, #faded ul li {
+		margin: auto;
+		padding: auto; 
+	}
+
+	/* Homepage video width */
+	.slides video {
+		width: 100%;
+		max-width: 350px;
+	}
+
+	#content {
+		margin: 2%;
+	}
+
+	/* Video page */
+	#gallery .portfolio {
+		padding: 2%;
+	}
+	#gallery .portfolio li {
+		display: inline-block;
+	}
+	body.page-id-7 .grid_12 {
+		/* max-width: 718px; */
+		width: 100%;
+	}
+	#gallery.four_columns .portfolio li a.image-wrap {
+		width: 100%;
+		height: 100%;
+	}
+
+        /* Pictures page */
+	body.page-id-9 .grid_12 {
+		max-width: 717px;
+		width: 100%
+	}
+
+	/* Make video iframe responsive */
+	.video_iframe {
+		max-width: 700px!important;
+		width: 100%!important;
+		height: 100%!important;
+		float: left;
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 35px;
+		height: 0;
+		overflow: hidden;
+	}
+	.video_iframe iframe {
+		height: 410px;
+		width: 700px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%!important;
+		height: 100%!important;
+	}
+
+
+	/* Pictures page */
+	/* Pictures Sidebar */
+	body.postid-816 .one_third {
+		width: 100%;
+		max-width: 232px; 
+	}
+
+       .grid_gallery {
+		display: flex !important;
+	}
+
+	/* Inside Picture page - Portfolio-view */
+	.grid_gallery .gallery_item {
+		float: left;
+		margin: 0 10px 15px 0;
+		/* removed to allow multiple images in one row - width: 100%; */
+	}
+	.featured-thumbnail img {
+		float: left;
+		width: 100%;
+		height: 100%;
+	}
+	/* Inside Picture page - Portfolio-view - Sidebar */
+	body.postid-824 .one_third {
+		width: initial;
+	}
+
+	#gallery.four_columns .portfolio li {
+		/* width: initial; */
+	}
+	.featured-thumbnail {
+		position: relative;
+		float: left;
+		margin: 5px 20px 10px 0;
+		/* width: 100%; */
+	}
+
+	/* Inside Pictures page - stop expanding lightbox / PrettyPhoto */
+	div.pp_default .pp_expand {
+		display: none!important;
+	}
+
+        /* Blog page - multiple images in one row */
+        .entry-content .gallery .gallery-item,
+        .page-content .gallery .gallery-item,
+	#gallery-1 .gallery-item,
+	#gallery-2 .gallery-item {
+		display: inline-table!important;
+        }
+	.entry-content img {
+		width: 100%;
+	}
+
+        /* About Us - bio width */
+        .about-us-page ul li .member-descp {
+		max-width: 405px;
+		width: 100%;
+		padding-left: 0px;
+        }
+
+        /* Contact Us page - address on top */
+        .contact-us-page {
+		display: flex;
+		flex-direction: column-reverse;
+		max-width: 960px;
+		width: 100%!important; 
+        }
+        .contact-us-page div {
+		width: 100%!important;
+        }
+
+
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+		display: inline-block;
+	}
+
+	#sidebar {
+		padding: 10%;
+	}
+
+	#widget-footer {
+		padding: 10%;
+	}
+
+
+
+}
+
+
+
+.sf-menu{
+	/* max-width: 940px;
+	width: 100%; */
+	margin: 180px -0px 0 -10px;
+	padding: 0 10px;
+}
+
+#main {
+	max-width:980px;
+	width: 100%
+}
+#copyright{
+	margin: 0 0px;
+}
+
+body.postid-2490 #footer{
+	max-width: 982px;
+	width: 100%;
+}
+#footer{
+	max-width: 982px;
+	width: 100%;	
+}
+
+/* Header Advertisement width fix on Video page */
+body.page-id-7 .grid_12,  body.page-id-9 .grid_12{
+	max-width: 940px;
+	width: 100%;
+}
+.four_columns .portfolio li {
+	margin-right: 5px!important;
+}
+
+/* Blog - remove icon in front of inline-gallery images */
+.entry-content .gallery .gallery-icon,
+.page-content .gallery .gallery-icon,
+dl dt {
+	background: none;
+}
+
+/* Contact Us - add padding */
+.contact-us-page {
+	padding: 26px;
+}
+
+
+/* top nav */
+.top-menu {
+	margin-top: -20px;
+}
+
+/* top ad and menu placement */
+#text-203 {
+	margin-top: -180px;
+}
+.sf-menu {
+	margin: 140px -0px 10px -10px;
+}
+
+/* temporary widget top-menu old hider 
+   replaced by actual top-menu from header file */
+.menu-top-menu-container {
+	display: none;
+}

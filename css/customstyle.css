@@ -92,9 +92,13 @@
 		margin: 10%;
 	}
 	#text-203 {
-		margin-top: -80px!important;
+		margin-top: -80px!important; 
 		margin-left: -40px;
 		width: 100%!important;
+	}
+	/* ad without marquee */
+	#text-203 > a > img {
+ 	   margin-top: 70px;
 	}
 
 	/* Homepage video */
@@ -165,12 +169,12 @@
 
 	/* Pictures page */
 	/* Pictures Sidebar */
-	body.postid-816 .one_third {
+	.entry-content.one_third.last {
 		width: 100%;
-		max-width: 232px; 
+		max-width: 232px;
 	}
 
-       .grid_gallery {
+	.grid_gallery {
 		display: flex !important;
 	}
 
@@ -310,7 +314,11 @@ dl dt {
 
 /* top ad and menu placement */
 #text-203 {
-	margin-top: -180px;
+	margin-top: -180px; 
+}
+/* ad without marquee */
+#text-203 > a > img {
+	   margin-top: 50px;
 }
 .sf-menu {
 	margin: 140px -0px 10px -10px;

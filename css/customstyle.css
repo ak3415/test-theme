@@ -210,14 +210,15 @@
 	}
 
         /* Blog page - multiple images in one row */
-        .entry-content .gallery .gallery-item,
-        .page-content .gallery .gallery-item,
+	.entry-content .gallery .gallery-item,
+	.page-content .gallery .gallery-item,
 	#gallery-1 .gallery-item,
 	#gallery-2 .gallery-item {
 		display: inline-table!important;
         }
 	.entry-content img {
 		width: 100%;
+		margin: 0em 1.5em!important;
 	}
 
         /* About Us - bio width */
@@ -301,6 +302,10 @@ dl dt {
 	background: none;
 }
 
+/* Blog - add margin to images to match content margin */
+.entry-content img {
+	margin: 0em 1.5em;
+}
 /* Contact Us - add padding */
 .contact-us-page {
 	padding: 26px;

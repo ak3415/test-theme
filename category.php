@@ -186,7 +186,7 @@
 								<?php $embed = get_post_meta(get_the_ID(), 'tz_video_embed', TRUE); ?>
 								<?php if(has_post_thumbnail()) { ?>
 								<?php	$thumb   = get_post_thumbnail_id();
-									$img_url = wp_get_attachment_url( $thumb,'full'); 
+									$img_url = wp_get_attachment_url( $thumb ); 
 									$image   = aq_resize( $img_url, 220, 140, true ); 
 									?>
 							<figure class="featured-thumbnail">

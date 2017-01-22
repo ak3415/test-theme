@@ -190,7 +190,17 @@
 									$image   = aq_resize( $img_url, 220, 140, true ); 
 									?>
 							<figure class="featured-thumbnail">
-							  <a href='<?php the_permalink() ?>' title="<?php the_title(); ?>">
+                <?php
+                if($embed) { 
+                ?>
+                 <a rel="prettyphoto[video]" href='<?php bloginfo('template_url')?>/flash/video.swf?width=800&height=600&colorTheme=cyan&fileVideo=<?php echo stripslashes(htmlspecialchars_decode($embed)); ?>' title="<?php the_title(); ?>">
+                <?php
+                } else { 
+                ?>
+                 <a href='<?php the_permalink() ?>' title="<?php the_title(); ?>">
+                <?php
+                } 
+                ?>
                                                              <img src="<?php echo $image ?>" alt="<?php the_title(); ?>"/>
                                                              <span class="play">
                                                                 <span class="button"></span>

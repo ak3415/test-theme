@@ -285,6 +285,12 @@ body.postid-2490 #footer{
 	max-width: 982px;
 	width: 100%;	
 }
+
+/* Homepage blog title */
+.blog-title h3 {
+	padding-top: 25px;
+}
+
 /* Video Category page footer margin override */
 body.page-id-7 .container_12 .grid_3 {
     margin: 1%!important;

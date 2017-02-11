@@ -29,7 +29,7 @@
       query_posts( array(
 			 'post_type' => 'post',
 			 'cat' => 839, 
-			 'posts_per_page' => 12,
+			 'posts_per_page' => 6,
 			 'paged' => $paged,
 			 'tax_query' => array(
 			 'relation' => 'AND',
@@ -59,7 +59,7 @@
 									<div class="desc">
 									  <div class="row-1">
 									    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-									<div class="terms"><?php the_terms( $post->ID, 'category', '', ', ', '' ); ?></div>
+									<div class="terms"><?php the_excerpt(); // the_terms( $post->ID, 'category', '', ', ', '' ); ?></div>
 									  </div>
 									
 					    <div class="row-2">
@@ -73,6 +73,59 @@
   
     <?php endwhile; endif; ?>
  </div>
+ 
+
+    <div class="title blog-title">
+      <h3><?php echo 'FEATURED BLOGS'; ?></h3>
+    </div>
+	<div id="video-cycle">
+	<?php if ( get_query_var('paged') ) {
+	              $paged = get_query_var('paged');
+	      } elseif ( get_query_var('page') ) {
+	              $paged = get_query_var('page');
+	      } else {
+	              $paged = 1;
+	      }
+	      query_posts( array(
+				 'post_type' => 'post',
+				 'cat' => 16536, //18076, 16866
+				 'posts_per_page' => 6,
+				 'paged' => $paged
+				 )
+	      );
+	      if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+				
+	      ?>
+		<div class="video-item">
+		  <?php $embed = get_post_meta(get_the_ID(), 'tz_video_embed', TRUE); ?>
+			<?php if(has_post_thumbnail()) { ?>
+				<?php
+				$thumb = get_post_thumbnail_id();
+				$img_url = wp_get_attachment_url( $thumb,'full'); //get img URL
+				$image = aq_resize( $img_url, 220, 140, true ); //resize & crop img
+				?>
+				<figure class="featured-thumbnail">
+					<a href='<?php the_permalink(); ?>' title="<?php the_title(); ?>"><img src="<?php echo $image ?>" alt="<?php the_title(); ?>"/><span class="play"><span class="button"></span></span></a>
+				</figure>
+			<?php } ?>
+			
+			<div class="desc">
+			  <div class="row-1">
+			    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+			  <div class="terms"><?php the_excerpt(); ?></div>
+			</div>
+						
+		    <div class="row-2">
+		      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="link"><span class="link-bg"></span><span class="hover"></span></a>
+		     <!--<span class="rating"><?php //GetWtiLikePost(); ?><?php //if(function_exists('the_ratings')) { the_ratings(); } ?></span>
+		      <span class="views"><?php //if(function_exists('the_views')) { the_views(); } ?></span>-->
+		    </div>
+		</div>
+	</div>
+    
+  
+    <?php endwhile; endif; ?>
+</div>
  
 
   <?php get_template_part('includes/post-formats/post-nav'); ?>

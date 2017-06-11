@@ -464,7 +464,7 @@
 
    
 
- <?php get_template_part('includes/post-formats/post-nav'); ?>
+ <?php // get_template_part('includes/post-formats/post-nav'); ?>
 
 
 

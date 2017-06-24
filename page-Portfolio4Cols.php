@@ -17,7 +17,7 @@ get_header();
   <?php $temp = $wp_query;
 	$wp_query= null;
 	$wp_query = new WP_Query(); ?>
-  <?php $wp_query->query("post_type=portfolio&". $catinclude ."&paged=".$paged.'&showposts=20&orderby=name&order=ASC'); ?>
+  <?php $wp_query->query("post_type=portfolio&". $catinclude ."&paged=".$paged.'&showposts=30&orderby=name&order=ASC'); ?>
   <?php if ( ! have_posts() ) : ?>
 	<div id="post-0" class="post error404 not-found">
 		<h1 class="entry-title"><?php _e( 'Not Found', 'theme1765' ); ?></h1>

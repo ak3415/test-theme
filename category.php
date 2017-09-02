@@ -191,7 +191,7 @@
 									?>
 							<figure class="featured-thumbnail">
                 <?php
-                if($embed) { 
+                if($embed && !isMobile()) { 
                 ?>
                  <a rel="prettyphoto[video]" href='<?php bloginfo('template_url')?>/flash/video.swf?width=800&height=600&colorTheme=cyan&fileVideo=<?php echo stripslashes(htmlspecialchars_decode($embed)); ?>' title="<?php the_title(); ?>">
                 <?php

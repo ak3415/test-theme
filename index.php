@@ -52,7 +52,16 @@
 										$image = aq_resize( $img_url, 220, 140, true ); //resize & crop img
 										?>
 										<figure class="featured-thumbnail">
-											<a rel="prettyphoto[video]" href='<?php bloginfo('template_url')?>/flash/video.swf?width=800&height=600&colorTheme=cyan&fileVideo=<?php echo stripslashes(htmlspecialchars_decode($embed)); ?>' title="<?php the_title(); ?>"><img src="<?php echo $image ?>" alt="<?php the_title(); ?>"/><span class="play"><span class="button"></span></span></a>
+										<?php
+										// If the user is on a mobile device, take them to the page, otherwise show a popup with video
+										if(isMobile()){ ?>
+											<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo $image ?>" alt="<?php the_title(); ?>"/><span class="play"><span class="button"></span></span></a>
+
+										<?php
+										} else { ?>
+											<a rel="prettyphoto[video]" href='<?php echo stripslashes(htmlspecialchars_decode($embed)); ?>' title="<?php the_title(); ?>"><img src="<?php echo $image ?>" alt="<?php the_title(); ?>"/><span class="play"><span class="button"></span></span></a>
+										<?php
+										} ?>
 										</figure>
 									<?php } ?>
 									

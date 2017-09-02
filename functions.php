@@ -527,4 +527,10 @@ function add_first_and_last($output) {
 }
 add_filter('wp_nav_menu', 'add_first_and_last');
 
+// Check if the user is viewing the site from a mobile device
+function isMobile() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+}
+
+
 ?>
